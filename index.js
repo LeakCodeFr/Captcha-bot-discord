@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
-const prefix = "$"
+const prefix = "Ton prefix"
 const setting = require("./setting.json");
 
 const Database = require('st.db')
@@ -25,7 +25,7 @@ const embed = new Discord.MessageEmbed()
 .addField(`${prefix}set-role`, "Modifier le Rôle du Captcha", true)
 .addField(`${prefix}set-ch`, "Modifier le channel Captcha", true)
 .addField(`${prefix}verify`, "Vérifie Toi", true)
-.setFooter("Developpeur:On Hamza#1828")
+.setFooter("Developpeur: On Hamza#1828")
 message.channel.send(embed)
 }
 })
@@ -39,7 +39,7 @@ const role = message.mentions.roles.first()
 db.set("role", role.id)
 const embed = new Discord.MessageEmbed()
 .setTitle("J'ai bien fait le changement du rôle")
-.setFooter("Developpeur:On Hamza#1828")
+.setFooter("Developpeur: On Hamza#1828")
 .setColor("GREEN")
 message.channel.send(embed)
 }
@@ -53,7 +53,7 @@ const ch = message.mentions.channels.first()
 db.set("ch", ch.id)
 const embed = new Discord.MessageEmbed()
 .setTitle("J'ai bien fait le changement du channel")
-.setFooter("Developpeur:On Hamza#1828")
+.setFooter("Developpeur: On Hamza#1828")
 .setColor("GREEN")
 message.channel.send(embed)
 }
@@ -94,7 +94,7 @@ const embed = new Discord.MessageEmbed()
 .setColor("BLUE")
 .setDescription("Écrivez les symboles dans l’image pour prendre le rôle")
 .setImage(c[cap])
-.setFooter("Vous avez 15 secondes | Developpeur:On Hamza#1828")
+.setFooter("Vous avez 15 secondes | Developpeur: On Hamza#1828")
 .setTimestamp()
 message.channel.send(embed)
       .then(() => {
@@ -111,14 +111,14 @@ member.roles.add(role).catch(console.error);
 const embed = new Discord.MessageEmbed()
 .setColor("GREEN")
 .setTitle("✅ | J'ai bien donner le rôle")
-.setFooter("Developpeur:On Hamza#1828")
+.setFooter("Developpeur: On Hamza#1828")
 message.channel.send(embed)
     })
     .catch(() => {
  const embed = new Discord.MessageEmbed()
 .setColor("RED")
 .setTitle("🕘 | Le temps est révolu")
-.setFooter("Developpeur:On Hamza#1828")
+.setFooter("Developpeur: On Hamza#1828")
 message.channel.send(embed)
     });
 }) 
